@@ -4,12 +4,12 @@ using namespace std;
 
 const int N = 8;
 
-int mat[N][N];                  // Матрица (0 = проходно, 1 = препрека)
-bool visited[N][N];            // Да не посећујемо исту ћелију више пута
-int distanceMat[N][N];         // Матрица растојања од старта
+int mat[N][N];                  // matrica 8x8 (0 prohodno, 1 prepreka)
+bool visited[N][N];            // da ne posecuje isto polje ponovo
+int distanceMat[N][N];         // matrica u koju se uipisuju rastojanja od pocetne pozicije
 
-int dx[] = { -1, 0, 1, 0 };     // кретање по X
-int dy[] = { 0, 1, 0, -1 };     // кретање по Y
+int dx[] = { -1, 0, 1, 0 };     // kretanje po X
+int dy[] = { 0, 1, 0, -1 };     // kretanje po Y
 
 bool isValid(int x, int y) {
     return x >= 0 && x < N && y >= 0 && y < N &&
