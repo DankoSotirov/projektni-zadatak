@@ -4,12 +4,12 @@ using namespace std;
 
 const int N = 8;
 
-int mat[N][N];                  // Матрица (0 = проходно, 1 = препрека)
-bool visited[N][N];            // Да не посећујемо исту ћелију више пута
-int distanceMat[N][N];         // Матрица растојања од старта
+int mat[N][N];                 
+bool visited[N][N];            
+int distanceMat[N][N];         
 
-int dx[] = { -1, 0, 1, 0 };     // кретање по X
-int dy[] = { 0, 1, 0, -1 };     // кретање по Y
+int dx[] = { -1, 0, 1, 0 };     
+int dy[] = { 0, 1, 0, -1 };    
 
 bool isValid(int x, int y) {
     return x >= 0 && x < N && y >= 0 && y < N &&
